@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{ /* "*" means select all elements*/
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*to prevent overflow! */
+    scroll-behavior: smooth;
+}
+header{
+    background-color: #f7f3f3;
+    width:100% ;
+    position: fixed; /*when user scrol this header will be fixed!*/
+    z-index:999; /*when user scrool the header will always be up nothing becomes up of it! GIVE IT A LARGE NUMBER*/
+    display:flex ;
+    justify-content: space-between; /*space between logo and nav menu*/
+    align-items: center;
+    padding: 10px 200px;
+
+}
+.logo{
+    text-decoration:none; /*to remove the underline which is by default exist under a hyperlink*/
+    color: #9e8bc5;
+    text-transform: uppercase; /*Make all letters of logo uppercase*/
+    font-weight: 600;
+    font-size: 1.5em;
+}
+.navigation a { /*Class selector*/
+    color: #9e8bc5;
+    text-decoration:none;
+    font-size: 1.1em;
+    font-weight: 400;
+    padding-left:30px; /*to make space between these hyperlinks*/
+}
+/*add a property when user put mouse on them their color will change*/
+.navigation a:hover {
+    color: #745E96;
+}
+section{
+    padding: 100px 200px;
+}
+.main{
+    width:100%; /*To take all width of screen!*/
+    min-height: 100vh; /*  minimum height is this, but it can be greater if we needed , ex: if child elements will take more size this will increase!*/
+    /*vh: view height: view of the whole page */ 
+    display: flex;
+    align-items: center; /*center items at the center of the page*/
+    /*Aligin items always come after display: flex;*/
+    background: url(images/wallpaper2.jpg)no-repeat ;
+    /* background-size:auto 110%;  */
+    background-size:cover; 
+    background-position: center;
+    /* background-position: right; */
+    background-attachment: fixed;
+}
+.main h2{
+    font-size: 2em;
+    font-weight: 500;
+}
+#span-hello{
+    color: #3f3f3f;
+    font-size: 2em;
+    font-weight: 400;
+}
+#span-name{ /*at main h2 span but span which has an id called : span- name*/
+    color: #745E96;
+    font-size: 2em;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 2px;
+
+}
+#span-job{
+    color: #3f3f3f;
+    font-size: 2.2em;
+    display: inline-block;
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+}
+
+.main h3{
+    color: #3f3f3f;
+    font-size: 3em;
+    font-weight: 450;
+    letter-spacing: 1px; /*space between letters*/
+    margin: 0px 0px 25px 0px;
+}
+.main-btn{
+    color:aliceblue;
+    background-color: #B9A5E2;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    display: inline-block; /* hyperlink in default is inline element in order to do padding make it a block element */
+    padding:0.9375em;
+    letter-spacing: 1px;
+    border-radius: 15px; /*to not make borders sharp*/
+    margin-bottom: 80px;
+    padding-left: 10px;
+    transition: 0.7s ease; /* when user put mouse on it it will be bigger by smooth effect*/
+
+}
+.main-btn:hover{ /*when mouse on it effections has to happen: color will change, it will be bigger*/
+    background-color:#8d78b6;
+    transform: scale(1.1);
+
+}
+.social-icons a{
+    color: #3f3f3f;
+    font-size: 1.8em;
+    padding-top: 7px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    
+}
+
+.title{
+    display: flex; /* it is a block element, we need to put it at the center*/
+    justify-content: center;
+    color: #3f3f3f;
+    font-size: 2.2 em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap; /*Card will go down if there is no space! no overflow will happen!*/
+    /*flex-wrap by default is no wrap!*/
+}
+.card {
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+.card:hover {
+    transform: scale(1.1);
+}
+.card .icon {
+    color: #3f3f3f;
+    font-size: 4em;
+    text-align: center;
+}
+.info {
+    text-align: center;
+}
+.info h3{
+    color: #9da3b1;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.projects{
+    background-color:#a8a1b7;
+}
+.projects .content{
+    margin-top: 30px;
+}
+.project-card{
+    background-color: #f7f3f3;
+    border: 1px solid white;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+.project-card:hover{
+    transform:scale(1.1);
+}
+.project-card:hover .project-image{
+    opacity:0.9; /*bright effect when click on pics of project*/
+}
+.project-image img{
+    width: 100%;
+
+}
+.project-info{
+    padding: 1em;
+
+}
+.project-category{
+    font-size: 0.8em;
+    color: #3f3f3f;
+}
+
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+.more-details{
+    text-decoration: none;
+    color: #a18fbc;
+
+}
+.more-details:hover{
+    color: #745E96;
+}
+.aboutme{
+    background-color: rgb(255, 255, 255);
+    padding: 5em;
+    width: 100%;
+}
+#h2-about{
+    font-size: 1.9em;
+    font-weight: 300;
+    color: #000000;
+    margin-bottom: 20px;
+    padding-top:0px;
+
+}
+.aboutme .content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-weight: 200;
+}
+.p-about {
+    flex: 1;
+    margin:0;
+    font-size: 1.5em;
+}
+.aboutme img{
+    max-width: 25%;
+    height: auto;
+    margin-left: 20px;
+}
+
+.contact{
+    background-color:#cbcdd1;
+}
+.contact .icon{
+    font-size: 4.5em;
+}
+.contact .info .h3{
+    color: #000000;
+}
+.contact .info p{
+    font-size: 1.2em;
+}
+.footer{
+    background-color: #9d9aa1;
+    color: #000000;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-title{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.footer-title span{
+    color: #2a2534;
+}
+.footer .social-icons a{
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+}
+@media(max-width:1023px){
+    /*if max-width< 1023px, means from 0 to 1023px do the folowing!*/
+    header{
+        padding: 12px 20px;
+    }
+    .navigation a{
+        padding-left: 10px;
+    }
+    .title{
+        font-size: 1.8em;
+    }
+    section{
+        padding: 80px 20px;
+    }
+    .main-content h2{
+        font-size: 1em;
+    }
+    .main-content h3{
+        font-size: 1.6em;
+    }
+    content{
+        flex-direction: column; /*they will be aligned under each other because screen is small*/
+        align-items: center;
+    }
+
+    @media (max-width:641px){ /*IPHONES*/
+        body{
+            font-size: 12px;
+        }
+    
+        .main-content h2{
+            font-size: 0.8em;
+        }
+    
+        .main-content h3{
+            font-size: 1.4em;
+        }
+    }
+    
+    @media (max-width:300px){ /*Galaxy*/
+        body{
+            font-size: 10px;
+            align-items: center;
+         
+        }
+    }
+}
