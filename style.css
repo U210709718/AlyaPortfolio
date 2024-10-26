@@ -45,7 +45,7 @@ section{
     display: flex;
     align-items: center; /*center items at the center of the page*/
     /*Aligin items always come after display: flex;*/
-    background: url(images/background.jpg)no-repeat ;
+    background: url(images/backgrounds.jpg)no-repeat ;
     /* background-size:auto 110%;  */
     background-size:cover; 
     background-position: center;
